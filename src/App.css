@@ -1,38 +1,86 @@
-.App {
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  max-width: 1400px;
+  margin-left: 187px;
+  background-color: #f2f2f2;
+}
+h1 {
   text-align: center;
+  padding: 56px;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+button {
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.flex-container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.card-grid {
+  width: 765px;
+  height: 644px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  column-gap: 10px;
+  row-gap: 15px;
+}
+.tabe {
   display: flex;
   flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  width: 262px;
+  height: 383px;
+  border-radius: 4px;
+  background-color: #fff;
+  padding-left: 15px;
+}
+.score-container {
+  display: flex;
+  flex-direction: column;
+  height: 175.92px;
+}
+.title {
+  width: 73px;
+  height: 27px;
+  font-family: sans-serif Nunito;
+  font-weight: 700;
+  font-style: normal;
+  font-size: 20px;
+  line-height: 27.28px;
+  margin-top: 11px;
+}
+.test {
+  margin-top: 58px;
+}
+.tries {
+  margin-top: 19px;
+  margin-bottom: 28.92px;
+}
+.options-container {
+  display: flex;
+  flex-direction: column;
+  height: 194.92px;
+}
+.btn {
+  width: 74px;
+  height: 32px;
+  border-radius: 2px;
+  background-color: #1890ff;
+}
+.btn-title {
+  display: inline-block;
+  width: 47px;
+  height: 22px;
+  margin-top: 5px;
+  margin-left: 16.95px;
+  font-family: openSans;
+  font-weight: 400;
+  font-style: normal;
+  font-size: 14px;
+  line-height: 22px;
+  text-align: center;
   color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  cursor: pointer;
 }
