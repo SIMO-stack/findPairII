@@ -37,6 +37,8 @@ function App() {
       .sort(() => Math.random() - 0.5)
       .map((card) => ({ ...card, id: Math.random() }));
     setCards(shuffledCards);
+    setChoiseOne(null);
+    setChoiseTwo(null);
     setTurns(0);
   };
   //handel Choise
@@ -47,10 +49,10 @@ function App() {
   useEffect(() => {
     if (choiseOne && choiseTwo) {
       setDisable(true);
-      if (choiseOne.src == choiseTwo.src) {
+      if (choiseOne.src === choiseTwo.src) {
         setCards((prevCards) => {
           return prevCards.map((card) => {
-            if (card.src == choiseOne.src) {
+            if (card.src === choiseOne.src) {
               return { ...card, matched: true };
             } else {
               return card;
@@ -63,7 +65,9 @@ function App() {
       }
     }
   }, [choiseOne, choiseTwo]);
-  console.log(cards);
+  useEffect(() => {
+    shuffledCards();
+  }, []);
   //reset chise and incrase the turns
   const restTurn = () => {
     setChoiseOne(null);

@@ -9,7 +9,7 @@ export default function Card({ card, handelChoose, flipped, disable }) {
   return (
     <div className="card">
       <div className={flipped ? "flipped" : ""}>
-        <img className="front" src={card.src} alt="image front" />
+        <img className="front" src={card.src} alt="" />
         <div className="back" onClick={handelClick} />
       </div>
     </div>
